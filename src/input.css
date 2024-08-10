@@ -5,6 +5,9 @@
 .fuente{
     font-family: "Red Hat Text", sans-serif;
 }
+.fondo{
+  background-color: #FCF8F5;
+}
 .desserts-grid {
     display: grid;
     justify-items: center;
