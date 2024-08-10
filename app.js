@@ -3,6 +3,7 @@ const cuantos_poster = document.querySelectorAll('.boton-cuantos');
 const aumentar_poster = document.getElementById('aumentar');
 const disminuir_poster = document.querySelectorAll('.boton-disminuir');
 let cantidad = document.getElementById('cantidad');
+const postres = document.querySelectorAll('.img_postre');
 
 function mostrarPostre(button) {
   // Encuentra el contenedor padre del botón clicado
@@ -12,9 +13,19 @@ function mostrarPostre(button) {
   const botonPostre = parent.querySelector('.boton-postre');
   const cuantos_poster = parent.querySelector('.boton-cuantos');
 
+  // Encuentra la imagen del postre relacionada dentro del mismo contenedor
+  const postre = parent.querySelector('.img_postre');
+
   // Cambia el estilo display de los botones
   botonPostre.style.display = 'none';
   cuantos_poster.style.display = 'flex';
+
+  // Verifica si se encontró la imagen y aplica el estilo
+  if (postre) {
+    postre.style.border = '2px solid #7F1D1D';
+  } else {
+    console.error("Imagen con la clase .img_postre no encontrada dentro de este contenedor");
+  }
 }
 
 
