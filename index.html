@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product list with cart</title>
+    <link rel="stylesheet" href="./src/input.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <!-- fuente google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white/20">
+    <main class="m-16 flex flex-col lg:flex-row gap-x-10">
+      <section>
+        <h1 class="text-2xl font-bold fuente tracking-wide mb-5">Desserts</h1>
+        <div class="desserts-grid">
+          <article id="waffle">
+            <div class="relative mb-5">
+              <img
+                src="assets/images/image-waffle-desktop.jpg"
+                alt="Waffle"
+                class="w-40 rounded-2xl"
+              />
+              <button
+                onclick="mostrarPostre(this)"
+                class="boton-postre absolute border bottom-[-15px] left-[15%] flex items-center gap-x-1 fuente font-semibold bg-white border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <img
+                  src="assets/images/icon-add-to-cart.svg"
+                  class="w-3"
+                  alt=""
+                />Add to Cart
+              </button>
+              <div
+                class="boton-cuantos hidden absolute border bottom-[-15px] left-[15%] items-center gap-x-5 fuente font-semibold bg-red-900 border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <button>
+                  <img
+                    src="assets/images/icon-decrement-quantity.svg"
+                    alt=""
+                    class=""
+                  />
+                </button>
+                <span class="text-white" id="cantidad">0</span>
+                <button>
+                  <img
+                    src="assets/images/icon-increment-quantity.svg"
+                    onclick=""
+                    id="aumentar"
+                    alt=""
+                    class="b"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <p class="text-[10px] text-gray-400 nombre">waffle</p>
+            <h4 class="text-xs font-semibold fuente">Waffle with Berries</h4>
+            <span class="text-orange-400 font-bold text-xs valor">$6.50</span>
+          </article>
+          <article>
+            <div class="relative mb-5">
+              <img
+                src="assets/images/image-creme-brulee-desktop.jpg"
+                alt="Crème Brûlée"
+                class="w-40 rounded-2xl"
+              />
+              <button
+                onclick="mostrarPostre(this)"
+                class="boton-postre absolute border bottom-[-15px] left-[15%] flex items-center gap-x-1 fuente font-semibold bg-white border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <img
+                  src="assets/images/icon-add-to-cart.svg"
+                  class="w-3"
+                  alt=""
+                />Add to Cart
+              </button>
+              <div
+                class="boton-cuantos hidden absolute border bottom-[-15px] left-[15%] items-center gap-x-5 fuente font-semibold bg-red-900 border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <button>
+                  <img
+                    src="assets/images/icon-decrement-quantity.svg"
+                    alt=""
+                    class=""
+                  />
+                </button>
+                <span class="text-white" id="cantidad">0</span>
+                <button>
+                  <img
+                    src="assets/images/icon-increment-quantity.svg"
+                    onclick=""
+                    id="aumentar"
+                    alt=""
+                    class="b"
+                  />
+                </button>
+              </div>
+            </div>
+            <p class="text-[10px] text-gray-400 nombre">Crème Brûlée</p>
+            <h4 class="text-xs font-semibold fuente">
+              Vanilla Bean Crème Brûlée
+            </h4>
+            <span class="text-orange-400 font-bold text-xs valor">$7.00</span>
+          </article>
+          <article>
+            <div class="relative mb-5">
+              <img
+                src="assets/images/image-macaron-desktop.jpg"
+                alt="Macaron"
+                class="w-40 rounded-2xl"
+              />
+              <button
+                onclick="mostrarPostre(this)"
+                class="boton-postre absolute border bottom-[-15px] left-[15%] flex items-center gap-x-1 fuente font-semibold bg-white border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <img
+                  src="assets/images/icon-add-to-cart.svg"
+                  class="w-3"
+                  alt=""
+                />Add to Cart
+              </button>
+              <div
+                class="boton-cuantos hidden absolute border bottom-[-15px] left-[15%] items-center gap-x-5 fuente font-semibold bg-red-900 border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <button>
+                  <img
+                    src="assets/images/icon-decrement-quantity.svg"
+                    alt=""
+                    class=""
+                  />
+                </button>
+                <span class="text-white">0</span>
+                <button>
+                  <img
+                    src="assets/images/icon-increment-quantity.svg"
+                    alt=""
+                    class="b"
+                  />
+                </button>
+              </div>
+            </div>
+            <p class="text-[10px] text-gray-400 nombre">Macaron</p>
+            <h4 class="text-xs font-semibold fuente">Macaron Mix of Five</h4>
+            <span class="text-orange-400 font-bold text-xs valor">$8.00</span>
+          </article>
+          <article>
+            <div class="relative mb-5">
+              <img
+                src="assets/images/image-tiramisu-desktop.jpg"
+                alt="Tiramisu"
+                class="w-40 rounded-2xl"
+              />
+              <button
+                onclick="mostrarPostre(this)"
+                class="boton-postre absolute border bottom-[-15px] left-[15%] flex items-center gap-x-1 fuente font-semibold bg-white border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <img
+                  src="assets/images/icon-add-to-cart.svg"
+                  class="w-3"
+                  alt=""
+                />Add to Cart
+              </button>
+              <div
+                class="boton-cuantos hidden absolute border bottom-[-15px] left-[15%] items-center gap-x-5 fuente font-semibold bg-red-900 border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <button>
+                  <img
+                    src="assets/images/icon-decrement-quantity.svg"
+                    alt=""
+                    class=""
+                  />
+                </button>
+                <span class="text-white">0</span>
+                <button>
+                  <img
+                    src="assets/images/icon-increment-quantity.svg"
+                    alt=""
+                    class="b"
+                  />
+                </button>
+              </div>
+            </div>
+            <p class="text-[10px] text-gray-400 nombre">Tiramisu</p>
+            <h4 class="text-xs font-semibold fuente">Classic Tiramisu</h4>
+            <span class="text-orange-400 font-bold text-xs valor">$5.50</span>
+          </article>
+          <article>
+            <div class="relative mb-5">
+              <img
+                src="assets/images/image-baklava-desktop.jpg"
+                alt="Baklava"
+                class="w-40 rounded-2xl"
+              />
+              <button
+                onclick="mostrarPostre(this)"
+                class="boton-postre absolute border bottom-[-15px] left-[15%] flex items-center gap-x-1 fuente font-semibold bg-white border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <img
+                  src="assets/images/icon-add-to-cart.svg"
+                  class="w-3"
+                  alt=""
+                />Add to Cart
+              </button>
+              <div
+                class="boton-cuantos hidden absolute border bottom-[-15px] left-[15%] items-center gap-x-5 fuente font-semibold bg-red-900 border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <button>
+                  <img
+                    src="assets/images/icon-decrement-quantity.svg"
+                    alt=""
+                    class=""
+                  />
+                </button>
+                <span class="text-white">0</span>
+                <button>
+                  <img
+                    src="assets/images/icon-increment-quantity.svg"
+                    alt=""
+                    class="b"
+                  />
+                </button>
+              </div>
+            </div>
+            <p class="text-[10px] text-gray-400 nombre">Baklava</p>
+            <h4 class="text-xs font-semibold fuente">Pistachio Baklava</h4>
+            <span class="text-orange-400 font-bold text-xs valor">$4.00</span>
+          </article>
+          <article>
+            <div class="relative mb-5">
+              <img
+                src="assets/images/image-meringue-desktop.jpg"
+                alt="Pie"
+                class="w-40 rounded-2xl"
+              />
+              <button
+                onclick="mostrarPostre(this)"
+                class="boton-postre absolute border bottom-[-15px] left-[15%] flex items-center gap-x-1 fuente font-semibold bg-white border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <img
+                  src="assets/images/icon-add-to-cart.svg"
+                  class="w-3"
+                  alt=""
+                />Add to Cart
+              </button>
+              <div
+                class="boton-cuantos hidden absolute border bottom-[-15px] left-[15%] items-center gap-x-5 fuente font-semibold bg-red-900 border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <button>
+                  <img
+                    src="assets/images/icon-decrement-quantity.svg"
+                    alt=""
+                    class=""
+                  />
+                </button>
+                <span class="text-white">0</span>
+                <button>
+                  <img
+                    src="assets/images/icon-increment-quantity.svg"
+                    alt=""
+                    class="b"
+                  />
+                </button>
+              </div>
+            </div>
+            <p class="text-[10px] text-gray-400">Pie</p>
+            <h4 class="text-xs font-semibold fuente nombre">
+              Lemon Meringue Pie
+            </h4>
+            <span class="text-orange-400 font-bold text-xs valor">$5.00</span>
+          </article>
+          <article>
+            <div class="relative mb-5">
+              <img
+                src="assets/images/image-cake-desktop.jpg"
+                alt="Cake"
+                class="w-40 rounded-2xl"
+              />
+              <button
+                onclick="mostrarPostre(this)"
+                class="boton-postre absolute border bottom-[-15px] left-[15%] flex items-center gap-x-1 fuente font-semibold bg-white border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <img
+                  src="assets/images/icon-add-to-cart.svg"
+                  class="w-3"
+                  alt=""
+                />Add to Cart
+              </button>
+              <div
+                class="boton-cuantos hidden absolute border bottom-[-15px] left-[15%] items-center gap-x-5 fuente font-semibold bg-red-900 border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <button>
+                  <img
+                    src="assets/images/icon-decrement-quantity.svg"
+                    alt=""
+                    class=""
+                  />
+                </button>
+                <span class="text-white">0</span>
+                <button>
+                  <img
+                    src="assets/images/icon-increment-quantity.svg"
+                    alt=""
+                    class="b"
+                  />
+                </button>
+              </div>
+            </div>
+            <p class="text-[10px] text-gray-400">Cake</p>
+            <h4 class="text-xs font-semibold fuente nombre">Red Velvet Cake</h4>
+            <span class="text-orange-400 font-bold text-xs valor">$4.50</span>
+          </article>
+          <article>
+            <div class="relative mb-5">
+              <img
+                src="assets/images/image-brownie-desktop.jpg"
+                alt="Brownie"
+                class="w-40 rounded-2xl"
+              />
+              <button
+                onclick="mostrarPostre(this)"
+                class="boton-postre absolute border bottom-[-15px] left-[15%] flex items-center gap-x-1 fuente font-semibold bg-white border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <img
+                  src="assets/images/icon-add-to-cart.svg"
+                  class="w-3"
+                  alt=""
+                />Add to Cart
+              </button>
+              <div
+                class="boton-cuantos hidden absolute border bottom-[-15px] left-[15%] items-center gap-x-5 fuente font-semibold bg-red-900 border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <button>
+                  <img
+                    src="assets/images/icon-decrement-quantity.svg"
+                    alt=""
+                    class=""
+                  />
+                </button>
+                <span class="text-white">0</span>
+                <button>
+                  <img
+                    src="assets/images/icon-increment-quantity.svg"
+                    alt=""
+                    class="b"
+                  />
+                </button>
+              </div>
+            </div>
+            <p class="text-[10px] text-gray-400">Brownie</p>
+            <h4 class="text-xs font-semibold fuente nombre">
+              Salted Caramel Brownie
+            </h4>
+            <span class="text-orange-400 font-bold text-xs valor">$5.50</span>
+          </article>
+          <article>
+            <div class="relative mb-5">
+              <img
+                src="assets/images/image-panna-cotta-desktop.jpg"
+                alt="Panna Cotta"
+                class="w-40 rounded-2xl"
+              />
+              <button
+                onclick="mostrarPostre(this)"
+                class="boton-postre absolute border bottom-[-15px] left-[15%] flex items-center gap-x-1 fuente font-semibold bg-white border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <img
+                  src="assets/images/icon-add-to-cart.svg"
+                  class="w-3"
+                  alt=""
+                />Add to Cart
+              </button>
+              <div
+                class="boton-cuantos hidden absolute border bottom-[-15px] left-[15%] items-center gap-x-5 fuente font-semibold bg-red-900 border-gray-500 rounded-2xl p-1 px-5 text-[10px] hover:border-orange-400"
+              >
+                <button>
+                  <img
+                    src="assets/images/icon-decrement-quantity.svg"
+                    alt=""
+                    class=""
+                  />
+                </button>
+                <span class="text-white">0</span>
+                <button>
+                  <img
+                    src="assets/images/icon-increment-quantity.svg"
+                    alt=""
+                    class="b"
+                  />
+                </button>
+              </div>
+            </div>
+            <p class="text-[10px] text-gray-400 nombre">Panna Cotta</p>
+            <h4 class="text-xs font-semibold fuente">Vanilla Panna Cotta</h4>
+            <span class="text-orange-400 font-bold text-xs valor">$6.50</span>
+          </article>
+        </div>
+      </section>
+      <section class="bg-white shadow-md rounded-2xl p-5 w-auto lg:w-72 seccion_2 ">
+        <h1 class="text-lg font-bold text-red-900 mb-4">
+          Your Cart <span id="numero_productos">(0)</span>
+        </h1>
+        <div class="flex flex-col items-center" id="carrito_vacio">
+          <img
+            src="assets/images/illustration-empty-cart.svg"
+            alt="Empty Cart"
+            class="w-24 mb-4"
+          />
+          <p class="text-gray-600 text-xs text-center fuente">
+            Your added items will appear here
+          </p>
+        </div>
+        <div class="hidden" id="carrito">
+          <ul class="flex gap-x-5 flex-col">
+
+          </ul>
+          <article >
+            <div class="mb-[50px] final">
+              <p class="text-xs fuente">Order total</p>
+              <span class="text-lg font-bold fuente" id="total"></span>
+            </div>
+            <div class="mt-5 anuncio ">
+              <img src="assets/images/icon-carbon-neutral.svg" alt="">
+              <p class="text-xs fuente">This is a <span class="font-bold">carbon-neutral</span> delivery</p>
+            </div>
+            <div class="flex items-center">
+            <button class="boton_confirmar fuente text-xs" onclick="mostrarModal()">Confirm Order</button></div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <section class="modal" id="modal"> 
+      <article class="bg-white w-[400px] flex flex-col p-5 rounded-xl">
+          <img class="w-7" src="assets/images/icon-order-confirmed.svg" alt="">
+          <h1 class="font-bold fuente text-lg mt-3">Order Confirmed</h1>
+          <p class="text-[10px] font-[400] fuente"> We hope you enjoy your food</p>
+          <div class="bg-[#e3cdbb46] p-3 mt-3 rounded-lg"><ul id="productos_modal"></ul>
+          </div>
+          
+        <button class="boton_confirmar text-[10px] fuente reiniciar" id="">Start New Order</button>
+      </article>
+    </section>
+
+
+    <div class="attribution hidden">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

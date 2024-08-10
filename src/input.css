@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fuente{
+    font-family: "Red Hat Text", sans-serif;
+}
+.desserts-grid {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr); /* 4 columnas */
+    gap: 20px; /* Espacio entre los artículos */
+  }
+  
+  @media (max-width: 1200px) {
+    .desserts-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    }
+    }
+  
+  
+  @media (max-width: 768px) {
+    .desserts-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .desserts-grid {
+      grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+  }
+  
+.seccion_2{
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+}
+
+.nombre{
+  font-size: 12px;
+  font-weight:bolder;
+  font-family: "Red Hat Text", sans-serif;
+  color:#303030;
+}
+
+.numero{
+  font-size: 14px;
+
+  font-family: "Red Hat Text", sans-serif;
+  color:#e1a118e3;
+}
+
+.precio{
+  font-size: 14px;
+  font-weight:400;
+  font-family: "Red Hat Text", sans-serif;
+  color:#434343;
+}
+
+.total{
+  font-size: 14px;
+  font-weight:600;
+  font-family: "Red Hat Text", sans-serif;
+  color:#743737;
+}
+
+.divisor-carrito {
+  display: flex;
+  gap: 20px; /* Ajuste el espacio entre elementos para que se vea bien en pantallas más pequeñas */
+  border-bottom: 1px solid #e1a118e3;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  width: 100%; /* Hace que ocupe todo el ancho disponible */
+  max-width: 300px; /* Limita el ancho máximo en pantallas grandes */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en la línea si no hay suficiente espacio */
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 640px) {
+  .divisor-carrito {
+    gap: 10px; /* Reduce el espacio entre elementos en pantallas pequeñas */
+  /* Coloca los elementos en una columna en lugar de en una fila */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    max-width: 100%; /* Asegura que el contenedor ocupe el ancho completo en pantallas pequeñas */
+  }
+}
+
+/* Ajustes para pantallas medianas */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .divisor-carrito {
+    gap: 20%; /* Ajusta el espacio entre elementos en pantallas medianas */
+    max-width: 100%; 
+    margin-top: 10px;/* Controla el ancho máximo del contenedor en pantallas medianas */
+  }
+}
+
+
+.boton-borrar{
+margin-left:70px;
+  color: rgb(0, 0, 0);
+  border: 1px solid #b19215e3;
+  padding: 5px 5px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.boton-borrar:hover{
+  background-color: #000000e3;
+  color: rgb(0, 0, 0);
+}
+
+.final{
+  display: flex;
+  justify-content: space-between;
+ align-items: center;
+ margin-bottom: 10px;
+}
+
+.anuncio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: #e3cdbb46;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.boton_confirmar{
+  display:inline;
+  width: 100%;
+  text-align: center;
+  background-color: #a42c08e3;
+  color: rgba(255, 255, 255, 0.782);
+  border: 1px solid #b19215e3;
+  padding: 10px ;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.modal{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.order_total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.thumbnail{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.modal_carrito{
+  display: flex;
+  border-radius: 10px;
+}
+
+.johan{
+  display: flex;
+margin-left: 15px;
+  gap: 25px;
+}
+
+.johan span{
+  font-size: 12px;
+  font-weight: 800;
+  font-family: "Red Hat Text", sans-serif;
+  color: #882242;
+
+}
+
+.johan span:nth-child(2){
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Red Hat Text", sans-serif;
+  color: #3d3d3d;
+  
+}
+
+.ml{
+  margin-left: 15px;
+}
+
+.ml2{
+  margin-left: 120px;
+}
+
+.divisor{
+
+  margin-top: 20px;
+  border-bottom: 1px solid #e1a1184c;
+  padding-bottom: 5px;
+}
+
